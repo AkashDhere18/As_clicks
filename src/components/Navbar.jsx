@@ -27,17 +27,18 @@ const Navbar = () => {
         : "bg-transparent py-5"
       } `}>
 
-      <div className='flex  flex-row justify-center items-center gap-20 align-center py-3'>
-        <div className='text-[#C8A96B]'>As Clicks</div>
-        <div className='gap-15 flex flex-row text-white'>
-          <Link to='/about_us'>ABOUT US</Link>
-          <Link to='/services'>SERVICES</Link>
-          <Link to='/our_work'>OUR WORK</Link>
-          <Link to='/contact_us'>CONTACT US</Link>
-        </div>
-        <div>
-          <Link to='contact_us'
-            className='border-2 rounded-full border-[#C8A96B] px-4 py-2 text-[#C8A96B] ' >BOOK SESSION</Link>
+      <div className='flex flex-row justify-between items-center gap-20 align-center py-3 px-8'>
+        <div className='h-10 flex items-center text-[#C8A96B] text-3xl font-semibold'>As Clicks</div>
+
+        <div className='gap-15 flex flex-row items-cente text-white text-sm'>
+          <Link className='h-10 flex items-center' to='/'>HOME</Link>
+          <Link className='h-10 flex items-center' to='/about_us'>ABOUT US</Link>
+          <Link className='h-10 flex items-center' to='/services'>SERVICES</Link>
+          <Link className='h-10 flex items-center' to='/our_work'>OUR WORK</Link>
+          <Link className='h-10 flex items-center' to='/contact_us'>CONTACT US</Link>
+        
+          <Link to='/contact_us'
+            className='border-2 rounded-full border-[#C8A96B] px-4 py-2 text-[#C8A96B] hover:bg-[#C8A96B] hover:text-black transition-all duration-300 ease-in-out' >BOOK SESSION</Link>
         </div>
       </div>
     </nav>
