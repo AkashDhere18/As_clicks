@@ -1,0 +1,29 @@
+.Footer{
+    padding: 0 8rem;
+    /* height: 30rem; */
+    color: rgb(202, 198, 198);
+}
+
+.Footer-top{
+    height:25rem
+}
+
+.Footer-top-left div button{
+padding: 10px 20px;
+    background-color: rgba(35, 33, 33, 0.695);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.6rem ;
+    /* font-size: ; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer-bottom{
+    border-top: 0.5px solid rgba(128, 128, 128, 0.17);
+    height: 5rem;
+}
