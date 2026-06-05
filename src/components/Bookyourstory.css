@@ -1,0 +1,12 @@
+.main{
+    height: 25rem;
+}
+
+.main h1{
+    font-size: 4rem;
+}
+
+.link{
+    margin:auto;
+    /* width: 30px; */
+}
