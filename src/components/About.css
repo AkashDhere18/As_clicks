@@ -1,0 +1,22 @@
+/* AboutTop.Jsx */
+.top{
+    height: 25rem;
+}
+
+.top h1{
+    font-size: 4rem;
+}
+
+/* AboutMain.jsx */
+.main{
+    height: 35rem;
+}
+
+.card-div{
+    padding: 0% 25%;
+}
+
+.card{
+    height: 100%;
+    
+}
