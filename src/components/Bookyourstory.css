@@ -1,5 +1,5 @@
 .main{
-    height: 25rem;
+    /* height: 50rem; */
 }
 
 .main h1{
@@ -9,4 +9,26 @@
 .link{
     margin:auto;
     /* width: 30px; */
+}
+
+@media (max-width : 768px) {
+    .main h1{
+        font-size: 3rem;
+    }
+
+    .main{
+    height: 25rem;
+  }
+}
+
+@media (max-width : 480px) {
+    .main h1{
+        font-size: 2rem;
+    }
+
+    .main{
+    height: 20rem;
+  }
+
+
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Bookyourstory from '../components/Bookyourstory'
+import OurDescription from '../components/ourDescription'
 
 const Home = () => {
     return (
         <>
 
-            <div className='sm:px-8 flex flex-col justify-evenly  h-screen bg-[url("https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]  bg-cover '>
+            <div className='sm:px-8 flex flex-col justify-evenly  h-screen bg-[url("https://images.unsplash.com/photo-1775566416299-f7bf0e06bfe7?q=80&w=2000&auto=format&fit=crop")]  bg-cover '>
                 <div className='h-full flex flex-col justify-evenly '>
                     <div className='text-white text-center '>
                         <h1 className='font-serif text-7xl font-medium tracking-wide leading-[1.2] mb-6'>EVERY LOVE STORY<br />
@@ -22,6 +23,7 @@ const Home = () => {
                 </div>
             </div>
             <Bookyourstory />
+            {/* <OurDescription /> */}
         </>
     )
 }

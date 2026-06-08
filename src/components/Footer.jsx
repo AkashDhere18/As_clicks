@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className=' bg-black text-white Footer '>
 
-      <div className='flex justify-between items-center Footer-top text-wrap'>
+      <div className='flex flex-col md:flex-row justify-between items-center Footer-top text-wrap'>
 
         <div className='leading-15 Footer-top-left' >
           <h2 className='text-3xl'>As_Clicks</h2>
