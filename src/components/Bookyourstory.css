@@ -1,34 +1,28 @@
-.main{
-    /* height: 50rem; */
+.top{
+    height: 30rem;
 }
 
-.main h1{
+.top h1{
     font-size: 4rem;
 }
 
-.link{
-    margin:auto;
-    /* width: 30px; */
-}
-
 @media (max-width : 768px) {
-    .main h1{
+    .top h1{
         font-size: 3rem;
     }
 
-    .main{
+    .top{
     height: 25rem;
   }
 }
 
 @media (max-width : 480px) {
-    .main h1{
+    .top h1{
         font-size: 2rem;
     }
 
-    .main{
+    .top{
     height: 20rem;
   }
-
 
 }

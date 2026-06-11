@@ -51,7 +51,8 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import logoB from '../assets/IMG_0185.PNG'
+import logoW from '../assets/IMG_0186.PNG'
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -79,7 +80,11 @@ const Navbar = () => {
       <div className="flex flex-row justify-between items-center h-full px-8">
 
         {/* Logo */}
-        <div className="text-[#C8A96B] text-3xl font-semibold">As Clicks</div>
+        <div className="text-[#C8A96B] text-3xl font-semibold">
+          <Link to='./'>
+          <img className='w-20  md:w-30 lg:w-35'  src= {logoW} alt='As_clicks'/>
+          </Link>
+        </div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex flex-row items-center gap-6 text-white text-sm">
