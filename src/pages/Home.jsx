@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Bookyourstory from '../components/Bookyourstory'
 import OurDescription from '../components/OurDescription'
 import HomeHero from '../components/HomeHero'
+import WordsOfLove from '../components/WordsOfLove'
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
 
             <HomeHero />
             <OurDescription />
+            <WordsOfLove />
             <Bookyourstory />
         </>
     )
