@@ -68,7 +68,7 @@ const OurDescription = () => {
                 { stat: '50',   label: "Destinations" },
             ].map(({ stat, label }) => (
                 <div key={label} className='flex flex-col items-start justify-center border-l border-[#C8A96B] py-2 pl-8'>
-                    <h2 className='text-4xl sm:text-5xl font-bold text-[#C8A96B] '>{stat}<sup className='text-4xl'>+</sup></h2>
+                    <h2 className='text-4xl sm:text-5xl font-bold text-[#C8A96B] '>{stat}<sup className='sm:text-4xl'>+</sup></h2>
                     <p className='text-lg md:text-xl text-gray-600 mt-1'>{label}</p>
                 </div>
             ))}

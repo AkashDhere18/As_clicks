@@ -26,3 +26,14 @@
   }
 
 }
+
+@media (max-width : 320px) {
+    .top h1{
+        text-wrap:initial;
+    }
+
+    .top{
+    height: 20rem;
+  }
+
+}

@@ -8,24 +8,26 @@ const AboutArtist = () => {
             <p className='text-lg'>The visionaries behind the lens dedicated to perserving your legacy</p>
         </div>
         <div className='flex flex-wrap  md:justify-center md:items-center gap-6 md:gap-x-10'>
-            <div className='artist-card w-full md:max-w-80' >
-                <img className='w-full' src='https://plus.unsplash.com/premium_photo-1674389878389-a92d46ae429e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
+            <div className='artist-card w-full md:max-w-80 ' >
+                <div className='md:h-[480px] md:overflow-hidden'>
+                <img className='w-full md:h-full object-cover' src='https://res.cloudinary.com/dsqcrxmcz/image/upload/v1781784378/download_2_yun7yw.jpg'/>
+                </div>
                 <div className='h-20 border py-3 px-5' >
                     <h2 className='text-xl '>Lead Photographer</h2>
                     <h3 className='text-lg text-[#C8A96B]'>Ashish Swami</h3>
                 </div>
             </div>
 
-            <div className='artist-card w-full md:max-w-80'>
-                <img className='w-full' src='https://plus.unsplash.com/premium_photo-1674389878389-a92d46ae429e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
+            <div className='artist-card w-full md:max-w-80 '>
+                <img className='w-full object-cover' src='https://plus.unsplash.com/premium_photo-1674389878389-a92d46ae429e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
                 <div className='h-20 border py-3 px-5' >
                     <h2 className='text-xl '>Lead Photographer</h2>
                     <h3 className='text-lg text-[#C8A96B]'>Ashish Swami</h3>
                 </div>
             </div>
 
-            <div className='artist-card w-full md:max-w-80'>
-                <img className='w-full cover' src='https://plus.unsplash.com/premium_photo-1674389878389-a92d46ae429e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
+            <div className='artist-card w-full md:max-w-80 '>
+                <img className='w-full object-cover' src='https://plus.unsplash.com/premium_photo-1674389878389-a92d46ae429e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
                 <div className='h-20 border py-3 px-5' >
                     <h2 className='text-xl '>Lead Photographer</h2>
                     <h3 className='text-lg text-[#C8A96B]'>Ashish Swami</h3>
