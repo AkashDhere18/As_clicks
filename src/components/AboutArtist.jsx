@@ -4,8 +4,8 @@ const AboutArtist = () => {
   return (
     <div className='text-white bg-black/97 px-4 py-15'>
         <div className='text-center mb-12'>
-            <h1 className='text-4xl md:text-5xl mb-8'>Meet The Artists</h1>
-            <p className='text-lg'>The visionaries behind the lens dedicated to perserving your legacy</p>
+            <h1 className='text-4xl md:text-5xl mb-8 font-heading'>Meet The Artists</h1>
+            <p className='text-lg font-body'>The visionaries behind the lens dedicated to perserving your legacy</p>
         </div>
         <div className='flex flex-wrap  md:justify-center md:items-center gap-6 md:gap-x-10'>
             <div className='artist-card w-full md:max-w-80 ' >
@@ -13,8 +13,8 @@ const AboutArtist = () => {
                 <img className='w-full md:h-full object-cover' src='https://res.cloudinary.com/dsqcrxmcz/image/upload/v1781784378/download_2_yun7yw.jpg'/>
                 </div>
                 <div className='h-20 border py-3 px-5' >
-                    <h2 className='text-xl '>Lead Photographer</h2>
-                    <h3 className='text-lg text-[#C8A96B]'>Ashish Swami</h3>
+                    <h2 className='text-xl font-heading'>Lead Photographer</h2>
+                    <h3 className='text-lg text-[#C8A96B] font-body'>Ashish Swami</h3>
                 </div>
             </div>
 

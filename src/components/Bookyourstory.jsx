@@ -8,7 +8,7 @@ const Bookyourstory = () => {
         <div className='top  flex justify-center items-center   bg-cover bg-[url(https://images.unsplash.com/photo-1619734089700-842e56497353?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]'>
             <div className='flex flex-col '>
 
-                <h1 className='text-white text-2xl leading-9 text-center whitespace-nowrap' >
+                <h1 className='font-heading text-white text-2xl leading-9 text-center whitespace-nowrap' >
                     Let's Create Somthing
                 </h1>
                 <h1 className='italic text-[#C8A96B] text-center whitespace-nowrap'>

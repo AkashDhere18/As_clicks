@@ -10,3 +10,5 @@ export const getGalleryImages = async (folder) =>{
 
    return data
 }
+
+export const sendContactForm = (data) => axiosInstance.post('/contact' , data);

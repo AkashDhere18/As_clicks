@@ -16,8 +16,8 @@ const WordsOfLove = () => {
     return (
         <div className='bg-black text-white sm:px-4 py-15'>
             <div className='text-center mb-15'>
-                <h1 className='text-4xl md:text-6xl mb-4'>Words of Love</h1>
-                <p className='text-lg md:text-xl text-center'>What our clients say about As_clicks experience</p>
+                <h1 className='text-4xl md:text-6xl mb-4 font-heading'>Words of Love</h1>
+                <p className='text-lg md:text-xl text-center font-body'>What our clients say about As_clicks experience</p>
             </div>
             <div className='flex gap-7 overflow-x-scroll px-7 py-6 md:w-[70%] m-auto scrollbar-thumb-slate-900/60 scrollbar-track-slate-900/10 ...'>
                 {
@@ -30,8 +30,8 @@ const WordsOfLove = () => {
                                   ))
                                 }
                             </p>
-                            <p className='mb-4 text-xl text-justify'>{d.text}</p>
-                            <p className='text-[#C8A96B] text-lg'>{d.name}</p>
+                            <p className='font-body mb-4 text-xl text-justify'>{d.text}</p>
+                            <p className='font-heading text-[#C8A96B] text-lg'>{d.name}</p>
                         </div>
                     ))
                 }

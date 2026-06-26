@@ -14,9 +14,9 @@ const Footer = () => {
 
         <div className='max-w-sm Footer-top-left' >
 
-          <h2 className='text-[#C8A96B] text-3xl mb-6'>As_clicks</h2>
+          <h2 className='text-[#C8A96B] text-3xl mb-6 font-heading'>ASPF</h2>
 
-          <p className='text-gray-400 text-lg leading-7 mb-6'>Luxury wedding and cinematic photography crafted with emotions, traditions, and timeless storytelling.</p>
+          <p className='text-gray-400 text-lg leading-7 mb-6 font-body'>Luxury wedding and cinematic photography crafted with emotions, traditions, and timeless storytelling.</p>
 
           <div className='flex gap-5'>
 
@@ -31,8 +31,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className='text-xl font-semibold mb-6'>Explore</h3>
-          <ul className='space-y-4 text-gray-400 text-md font-semibold'>
+          <h3 className='text-xl font-semibold mb-6 font-heading'>Explore</h3>
+          <ul className='space-y-4 text-gray-400 text-md font-semibold font-body'>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about_us'>About Us</Link></li>
             <li><Link to=''>Services</Link></li>
@@ -42,14 +42,14 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className='text-xl font-semibold mb-6'>contact</h3>
-          <ul className='text-gray-400 space-y-4 text-md font-semibold'>
+          <h3 className='text-xl font-semibold mb-6 font-heading'>Contact</h3>
+          <ul className='text-gray-400 space-y-4 text-md font-semibold font-body'>
             <li className='flex gap-3 items-center'>
               <FaRegEnvelope color='#C8A96B' size={16} />
-              <a href='mailto:asclicks77@gmail.com'>asclicks77@gmail.com</a></li>
+              <a href='mailto:helloasclick@gmail.com'>helloasclick@gmail.com</a></li>
             <li className='flex gap-3 items-center'>
               <FaPhoneAlt color='#C8A96B' size={16}/>
-              <a href='tel:+918379898924'>+91 85945 62345</a></li>
+              <a href='tel:+918379898924'>+91 83798 98924</a></li>
             <li className='flex gap-3 items-center'>
               <IoLocationOutline color='#C8A96B' size={16}/>
               <a href='https://maps.app.goo.gl/FBaCUujhUt5MaA9y8' target='_blank' rel="noopener noreferrer">Sangli , India</a></li>
@@ -58,8 +58,8 @@ const Footer = () => {
       </div>
 
       <div className='text-center  md:flex justify-between items-center Footer-bottom pt-10 '>
-        <p className='mb-2'>© 2026 As_clicks. All rights reserved.</p>
-        <div >
+        <p className='mb-2'>© 2026 ASPF. All rights reserved.</p>
+        <div className='space-x-3'>
           <Link >Privacy Policy</Link>
           <Link >Terms of Service</Link>
         </div>
