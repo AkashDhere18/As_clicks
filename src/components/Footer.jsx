@@ -4,6 +4,7 @@ import "./Footer.css"
 import { FaInstagram } from "react-icons/fa6";
 import { FaRegEnvelope , FaPhoneAlt } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
+import logoW from '../assets/IMG_0186.PNG'
 
 
 const Footer = () => {
@@ -14,7 +15,8 @@ const Footer = () => {
 
         <div className='max-w-sm Footer-top-left' >
 
-          <h2 className='text-[#C8A96B] text-3xl mb-6 font-heading'>ASPF</h2>
+          {/* <h2 className='text-[#C8A96B] text-3xl mb-6 font-heading'>ASPF</h2> */}
+          <img src={logoW} className='w-18 h-5 md:w-25 md:h-8 mb-6' />
 
           <p className='text-gray-400 text-lg leading-7 mb-6 font-body'>Luxury wedding and cinematic photography crafted with emotions, traditions, and timeless storytelling.</p>
 
@@ -35,7 +37,7 @@ const Footer = () => {
           <ul className='space-y-4 text-gray-400 text-md font-semibold font-body'>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about_us'>About Us</Link></li>
-            <li><Link to=''>Services</Link></li>
+            <li><Link to='/services'>Services</Link></li>
             <li><Link to='/our_work'>Our Work</Link></li>
             <li><Link to='/contact_us'>Contact Us</Link></li>
           </ul>

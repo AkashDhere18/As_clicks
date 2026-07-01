@@ -18,18 +18,75 @@ const ContactUs = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    contact: "",
+  });
+
+  const [submitting, setSubmitting] = useState(false);
+
   const handelChange = (e) => {
+    const { name, value } = e.target;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+
+    // clear error for this field as user types
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
+  };
+
+  const validate = () => {
+    const newErrors = { name: "", email: "", contact: "" };
+    let isValid = true;
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+      isValid = false;
+    }
+
+    // Contact number validation (10-digit Indian mobile number)
+    const contactRegex = /^[6-9]\d{9}$/;
+    if (!formData.contact.trim()) {
+      newErrors.contact = "Contact number is required";
+      isValid = false;
+    } else if (!contactRegex.test(formData.contact.trim())) {
+      newErrors.contact = "Please enter a valid 10-digit mobile number";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handelSubmit = async (e) => {
     e.preventDefault();
 
-    try {
+    if (!validate()) {
+      return;
+    }
 
+    setSubmitting(true);
+
+    try {
       const res = await sendContactForm(formData);
 
       alert("message sent succesfully")
@@ -41,10 +98,12 @@ const ContactUs = () => {
         event: "",
         message: "",
       })
+      setErrors({ name: "", email: "", contact: "" });
     } catch (error) {
       console.log(error)
-
       alert("failed to send message")
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -63,7 +122,7 @@ const ContactUs = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handelSubmit} className="flex flex-col gap-6 w-full max-w-md font-body">
+          <form onSubmit={handelSubmit} noValidate className="flex flex-col gap-6 w-full max-w-md font-body">
 
             {/* Name + Email */}
             <div className='flex flex-col md:flex-row gap-5'>
@@ -77,9 +136,11 @@ const ContactUs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handelChange}
-                  required
-                  className="w-full bg-gray-400/10 border border-gray-300/10 p-4 text-white outline-none focus:border-[#C8A96B]"
+                  className={`w-full bg-gray-400/10 border p-4 text-white outline-none focus:border-[#C8A96B] ${errors.name ? "border-red-500" : "border-gray-300/10"}`}
                 />
+                {errors.name && (
+                  <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                )}
               </div>
 
               <div className="flex-1">
@@ -92,13 +153,15 @@ const ContactUs = () => {
                   name="email"
                   value={formData.email}
                   onChange={handelChange}
-                  required
-                  className="w-full bg-gray-400/10 border border-gray-300/10 p-4 text-white outline-none focus:border-[#C8A96B]"
+                  className={`w-full bg-gray-400/10 border p-4 text-white outline-none focus:border-[#C8A96B] ${errors.email ? "border-red-500" : "border-gray-300/10"}`}
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                )}
               </div>
             </div>
 
-            {/* Event Date + Event Type */}
+            {/* Contact Number + Event Type */}
             <div className='flex flex-col md:flex-row gap-5'>
               <div className="flex-1">
                 <label htmlFor="number" className="block text-xs tracking-[3px] uppercase text-gray-300 mb-2">
@@ -110,9 +173,11 @@ const ContactUs = () => {
                   name='contact'
                   value={formData.contact}
                   onChange={handelChange}
-                  required
-                  className="w-full bg-gray-400/10 border border-gray-300/10 p-4 text-white outline-none focus:border-[#C8A96B]"
+                  className={`w-full bg-gray-400/10 border p-4 text-white outline-none focus:border-[#C8A96B] ${errors.contact ? "border-red-500" : "border-gray-300/10"}`}
                 />
+                {errors.contact && (
+                  <p className="text-red-500 text-xs mt-1">{errors.contact}</p>
+                )}
               </div>
 
               <div className="flex-1">
@@ -122,14 +187,16 @@ const ContactUs = () => {
                 <select
                   id="eventType"
                   name='event'
+                  value={formData.event}
                   onChange={handelChange}
-                  className="w-full bg-gray-400/10 border border-gray-300/10 p-4 text-white outline-none focus:border-[#C8A96B]"
+                  className="w-full bg-gray-400/10 border border-gray-300/10 p-4 text-white bg-black outline-none focus:border-[#C8A96B]"
                 >
-                  <option value="Wedding">Wedding</option>
-                  <option value="Engagement">Engagement</option>
-                  <option value="Pre Wedding">Pre Wedding</option>
-                  <option value="Reception">Reception</option>
-                  <option value="other">Other</option>
+                  <option className='bg-black text-white' value="" disabled hidden>Select event type</option>
+                  <option className='bg-black text-white' value="Wedding">Wedding</option>
+                  <option className='bg-black text-white' value="Engagement">Engagement</option>
+                  <option className='bg-black text-white' value="Pre Wedding">Pre Wedding</option>
+                  <option className='bg-black text-white' value="Reception">Reception</option>
+                  <option className='bg-black text-white' value="other">Other</option>
                 </select>
               </div>
             </div>
@@ -152,9 +219,10 @@ const ContactUs = () => {
             {/* Button */}
             <button
               type="submit"
-              className="w-full bg-[#C8A96B] text-black py-4 uppercase tracking-[3px] font-medium hover:opacity-90 transition"
+              disabled={submitting}
+              className="w-full bg-[#C8A96B] text-black py-4 uppercase tracking-[3px] font-medium hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Inquiry
+              {submitting ? "Sending..." : "Send Inquiry"}
             </button>
 
           </form>

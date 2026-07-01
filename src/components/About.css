@@ -1,40 +1,47 @@
 /* AboutTop.Jsx */
-.top{
+.top {
     height: 30rem;
 }
 
-.top h1{
+.top h1 {
     font-size: 4rem;
 }
 
 @media (max-width : 768px) {
-    .top h1{
+    .top h1 {
         font-size: 3rem;
     }
 
-    .top{
-    height: 25rem;
-  }
+    .top {
+        height: 25rem;
+    }
 }
 
 @media (max-width : 480px) {
-    .top h1{
+    .top h1 {
         font-size: 2rem;
     }
 
-    .top{
-    height: 20rem;
-  }
+    .top {
+        height: 20rem;
+    }
 
 }
 
 /* AboutMain.jsx */
-.main{
+.main {
     height: min-content;
 }
 
 
-.card{
+.card {
     border: 0.2px solid rgb(197, 197, 197)
-    
+}
+
+@media (min-width: 768px) and (max-width: 840px) {
+
+    .card-div {
+        gap: 5px;
+    }
+
 }

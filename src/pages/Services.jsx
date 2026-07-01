@@ -1,8 +1,13 @@
 import React from 'react'
+import PackagesCom from '../components/PackagesCom'
+import FrequentQuestions from '../components/FrequentQuestions'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+    <PackagesCom />
+    <FrequentQuestions />
+    </>
   )
 }
 

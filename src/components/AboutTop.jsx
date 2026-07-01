@@ -1,20 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './About.css'
+import coverImg from '../assets/aboutCover.jpg'
 
 const AboutTop = () => {
   return (
-    <div className='top  flex justify-center items-center   bg-cover bg-[url(https://images.unsplash.com/photo-1779253806162-a58a28c1c81a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]'>
-            <div className='flex flex-col '>
-
-                <h1 className='text-white text-2xl leading-9 text-center whitespace-nowrap font-heading' >
-                    Capturing Emotions 
-                </h1>
-                <h1 className='italic text-[#C8A96B] text-center whitespace-nowrap'>
-                    With Elegance 
-                </h1>
+    <div className='relative top overflow-hidden flex justify-center items-center   bg-cover '>
+        {/* <div className='absolute inset-0 w-full h-full object-cover object-center z-0'> */}
+          <img src={coverImg} className='absolute inset-0 w-full h-full object-cover object-center z-0'/>
+          
+        {/* </div> */}
+        <div className='flex flex-col z-10'>
         
-            </div>
+        <h1 className='text-white text-2xl leading-9 text-center whitespace-nowrap font-heading' >
+          Capturing Emotions
+        </h1>
+        <h1 className='italic  text-center whitespace-nowrap' style={{
+          background: 'linear-gradient(180deg, #f0c97a 0%, #C8A96B 50%, #9d7a3a 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}>
+          With Elegance
+        </h1>
+
+      </div>
     </div>
   )
 }
