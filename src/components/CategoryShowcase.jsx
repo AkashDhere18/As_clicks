@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import weddingImg from '../assets/Card_Thumbnails/DSC04737.JPG.jpeg'
-import mhendiImg from '../assets/Card_Thumbnails/WhatsApp Image 2026-06-21 at 12.52.27 AM (7).jpeg'
+import weddingImg from '../assets/Card_Thumbnails/DSC04737.JPG.webp'
+import mhendiImg from '../assets/Card_Thumbnails/DSC03148.JPG.webp'
+import preWedding from '../assets/Card_Thumbnails/IMG_5193.JPG.webp'
+import postWedding from '../assets/Card_Thumbnails/IMG_5089.JPG.webp'
+import maternityImg from '../assets/Card_Thumbnails/maternityImg.webp'
+import otherImg from '../assets/Card_Thumbnails/otherImg.webp'
+import engagementImg from '../assets/Card_Thumbnails/IMG_5188.JPG.webp'
+
 
 // Replace these placeholder images with your own Cloudinary photos per category
 const categories = [
@@ -13,31 +19,31 @@ const categories = [
   },
   {
     title: "Pre-Wedding",
-    image: "https://picsum.photos/seed/pre-wedding-photo/600/600",
+    image: preWedding,
     category: "Pre-wedding",
     featured: false,
   },
   {
     title: "Maternity",
-    image: "https://picsum.photos/seed/maternity-photo/600/600",
+    image: maternityImg,
     category: "Maternity",
     featured: false,
   },
   {
     title: "Post-Wedding",
-    image: "https://picsum.photos/seed/post-wedding-photo/600/600",
+    image: postWedding,
     category: "Post-Wedding",
     featured: false,
   },
   {
     title: "Engagement",
-    image: "https://picsum.photos/seed/engagement-photo/600/600",
+    image: engagementImg,
     category: "Engagement",
     featured: false,
   },
   {
     title: "Birthday Shoot",
-    image: "https://picsum.photos/seed/birthday-photo/600/600",
+    image: "https://images.unsplash.com/photo-1646470129509-9d5f9c3b0b1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D",
     category: "Birthday Shoot",
     featured: false,
   },
@@ -49,7 +55,7 @@ const categories = [
   },
   {
     title: "Other",
-    image: "https://picsum.photos/seed/other-photo/600/600",
+    image: otherImg,
     category: "Others",
     featured: false,
   },

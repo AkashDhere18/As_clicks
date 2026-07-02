@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import bgImage from '../assets/hero_bg.jpeg'
+import bgImage from '../assets/heroSection/DSC00581.jpg (3) (1).webp'
 
 const HomeHero = () => {
     const [animate, setAnimate] = useState(false)

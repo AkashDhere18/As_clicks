@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import weddingImage from '../assets/Card_Thumbnails/DSC04737.JPG.jpeg' ;
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { getGalleryImages } from "../api/api";
 import PageWrapper from '../components/PageWrapper';
 import "yet-another-react-lightbox/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import weddingImage from '../assets/Card_Thumbnails/DSC04737.JPG.webp' ;
+import preWedding from '../assets/Card_Thumbnails/IMG_5193.JPG.webp'
+import engagementImg from '../assets/Card_Thumbnails/IMG_5188.JPG.webp'
+import otherImg from '../assets/Card_Thumbnails/otherImg.webp'
 
 
 
@@ -17,15 +20,15 @@ const categories = [
   },
   {
     title: "Engagement",
-    image: "https://images.unsplash.com/photo-1654156577076-e0350ba86cc1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGluZGlhbiUyMHdlZWRpbmclMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D",
+    image: engagementImg,
   },
   {
     title: "Pre-wedding",
-    image: "https://images.unsplash.com/photo-1600685912448-8bc35c141e18?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGluZGlhbiUyMHdlZWRpbmclMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D",
+    image: preWedding,
   },
   {
     title: "Others",
-    image: "https://images.unsplash.com/photo-1714236857540-c1fb413415e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGluZGlhbiUyMHdlZWRpbmclMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D",
+    image: otherImg,
   },
 ];
 

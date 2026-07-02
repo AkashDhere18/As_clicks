@@ -1,4 +1,5 @@
 import React from 'react'
+import image from '../assets/Card_Thumbnails/DSC04534Img.jpg'
 
 const OurDescription = () => {
   return (
@@ -6,10 +7,10 @@ const OurDescription = () => {
     <div className='flex flex-col md:flex-row md:justify-center md:items-stretch  px-6 sm:px-12 md:px-20 py-16 w-full  gap-10 bg-black text-white'>
 
     {/* Image */}
-    <div className='w-full md:w-[45%] md:min-h-[500px]'>
+    <div className='w-full md:w-[45%] md:min-h-[500px] lg:max-h-[500px]'>
         <img
-            className="w-full h-72 sm:h-96 md:h-full object-cover"
-            src='https://images.unsplash.com/photo-1610173826014-d131b02d69ca?q=80&w=2000&auto=format&fit=crop'
+            className="w-full h-72 sm:h-52 md:h-full object-cover"
+            src={image}
         />
     </div>
 

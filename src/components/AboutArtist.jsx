@@ -1,4 +1,5 @@
 import React from 'react'
+import FounderImg from '../assets/Artist/DSC03396.JPG.webp'
 
 const AboutArtist = () => {
   return (
@@ -10,7 +11,7 @@ const AboutArtist = () => {
         <div className='flex justify-center items-center '>
             <div className='artist-card w-full  sm:max-w-60 md:max-w-80 ' >
                 <div className='md:h-[480px] md:overflow-hidden'>
-                <img className='w-full md:h-full object-cover' src='https://res.cloudinary.com/jvvmdy5y/image/upload/WhatsApp_Image_2026-07-01_at_3.59.26_PM_cbhhhd.jpg'/>
+                <img className='w-full md:h-full object-cover' src={FounderImg} alt='artist_img'/>
                 </div>
                 <div className='h-20 border py-3 px-5' >
                     <h3 className='text-lg text-[#C8A96B] font-body'>Ashish Swami</h3>
