@@ -5,8 +5,9 @@ import { FiPhone } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import StudioInformation from '../components/StudioInformation';
-import { sendContactForm } from '../api/api';
+// import { sendContactForm } from '../api/api';
 import PageWrapper from '../components/PageWrapper';
+import { Toaster, toast } from "react-hot-toast";
 
 const ContactUs = () => {
 
@@ -87,25 +88,79 @@ const ContactUs = () => {
     setSubmitting(true);
 
     try {
-      const res = await sendContactForm(formData);
 
-      alert("message sent succesfully")
+      const form = new FormData();
 
-      setFormData({
-        name: "",
-        email: "",
-        contact: "",
-        event: "",
-        message: "",
-      })
-      setErrors({ name: "", email: "", contact: "" });
+      form.append("access_key" , import.meta.env.VITE_WEB3FORMS_KEY);
+
+      form.append("name" , formData.name);
+      form.append("email" , formData.email);
+      form.append("contact", formData.contact);
+      form.append("event", formData.event);
+      form.append("message", formData.message);
+
+      form.append("subject", "New Photography Enquiry");
+      // form.append("from_name", formData.name);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body:form,
+      });
+
+      const result = await response.json();
+
+      if(result.success){
+        // alert("Message sent succesfully!");
+        toast.success("Inquiry sent successfully!");
+        
+        setFormData({
+          name: "",
+          email: "",
+          contact: "",
+          event: "",
+          message: "",
+        });
+        
+        setErrors({
+          name: "",
+          email: "",
+          contact: "",
+        });
+
+      }else{
+        // console.log(result);
+        // alert("Failed to send message.");
+        toast.error("Failed to send inquiry.");
+      }
+
     } catch (error) {
-      console.log(error)
-      alert("failed to send message")
-    } finally {
+      // console.log(error);
+      alert("Something went wrong.");  
+    }
+    finally{
       setSubmitting(false);
     }
-  }
+
+    // try {
+    //   const res = await sendContactForm(formData);
+
+    //   alert("message sent succesfully")
+
+    //   setFormData({
+    //     name: "",
+    //     email: "",
+    //     contact: "",
+    //     event: "",
+    //     message: "",
+    //   })
+    //   setErrors({ name: "", email: "", contact: "" });
+    // } catch (error) {
+    //   console.log(error)
+    //   alert("failed to send message")
+    // } finally {
+    //   setSubmitting(false);
+    // }
+  };
 
   return (
     <PageWrapper>
