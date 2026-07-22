@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import StudioInformation from '../components/StudioInformation';
 // import { sendContactForm } from '../api/api';
 import PageWrapper from '../components/PageWrapper';
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const ContactUs = () => {
 
@@ -135,7 +135,8 @@ const ContactUs = () => {
 
     } catch (error) {
       // console.log(error);
-      alert("Something went wrong.");  
+      // alert("Something went wrong.");
+      toast.error("Something went wrong.");  
     }
     finally{
       setSubmitting(false);

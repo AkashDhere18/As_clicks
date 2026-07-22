@@ -6,7 +6,7 @@ const WordsOfLove = () => {
 
     const [data, setData] = useState([])
 
-    console.log(reviews)
+    // console.log(reviews)
 
     useEffect(() => {
         setData(reviews)
